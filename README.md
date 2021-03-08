@@ -1,22 +1,8 @@
 # UCSD_Imageclef2020
+For ImageCLEFmed Tuberculosis competition, the 2ed place. 
+Paper link: http://ceur-ws.org/Vol-2696/paper_70.pdf
 
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-
-
-# Abstract
+# Introduction
 We proposed an AI model with laterality-reduction 3D CBAM Resnet and balanced-sampler strategy to detect and characterize of tuberculosis and the evaluation of lesion characteristics as a solution for a classification of tuberculosis findings. Detection and characterization of tuberculosis and the evaluation of lesion characteristics are challenging. In an effort to provide a solution for a classification task of tuberculosis findings, we proposed a laterality-reduction 3D AI model with attention mechanism and balanced-sampler strategy. With proper usage of both provided masks, each side of the lung was cropped, masked, and rearranged so that laterality could be neglected, and dataset size doubled. Balanced sampler in each batch sampler was also used in this study to address the data imbalance problem. CBAM was used to add an attention mechanism in each block of the Res-net to further improve the performance of the CNN.
 
 
@@ -33,7 +19,7 @@ We proposed an AI model with laterality-reduction 3D CBAM Resnet and balanced-sa
 
 # Run
 
-## Example Data
+## Dataset
 
 TB2020 public dataset link:
 https://www.imageclef.org/2020/medical/tuberculosis
@@ -43,11 +29,15 @@ https://drive.google.com/drive/folders/1fPd1PRRa_cxBCyEkH2XOMpkpvSKoQo6S?usp=sha
 
 Please download the data to your local path: [data_path]
 
-## Image preparation and Network architecture
+## Network architecture and Image preparation
 
 ![image](https://github.com/lyuxing/UCSD_Imageclef2020/blob/main/img/Figure%202%20network%20architecture.png)
 
+A 3D convolutional block attention module (CBAM)-Resnet was designed to train the model for 3-class binary classification based on the PyTorch framework. A standard 3D-resnet34 was used as the convolutional neural network backbone, with three fc layers to be the classifier. CBAM was used to implement channel and spatial at-tention mechanisms for each block of the Resnet. Sigmoid was used as the activation function for binary classification.
+
 ![image](https://github.com/lyuxing/UCSD_Imageclef2020/blob/main/img/Figure%203%20image%20preprocessing.png)
+
+
 
 ## Pretrained model path
 
