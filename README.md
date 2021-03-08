@@ -45,7 +45,7 @@ Please download the data to your local path: [data_path]
 
 ## Image preparation and Network architecture
 
-![img/Figure 2 network architecture.tif](img/Figure 2 network architecture.tif)
+![image](https://github.com/lyuxing/UCSD_Imageclef2020/blob/main/img/Figure%202%20network%20architecture.tif)
 
 ![img/Figure 3 image preprocessing.tif](img/Figure 3 image preprocessing.tif)
 
