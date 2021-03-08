@@ -47,7 +47,7 @@ Please download the data to your local path: [data_path]
 
 ![image](https://github.com/lyuxing/UCSD_Imageclef2020/blob/main/img/Figure%202%20network%20architecture.png)
 
-![img/Figure 3 image preprocessing.tif](img/Figure 3 image preprocessing.tif)
+![image](https://github.com/lyuxing/UCSD_Imageclef2020/blob/main/img/Figure%203%20image%20preprocessing.png)
 
 ## Pretrained model path
 
