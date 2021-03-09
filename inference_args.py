@@ -1,3 +1,18 @@
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
+'''
+@File    :   inference.py
+@Contact :   lvxingvir@gmail.com
+@License :   (C)Copyright UCSD & Xing
+
+@Modify Time      @Author    @Version    @Desciption
+------------      -------    --------    -----------
+03/03/2021 10:18  Xing        1.0         Initial Framework Generation
+03/03/2021 12:20  Xing        1.1         Most Done!
+03/08/2021 18:19  Xing        1.2         Clean up annotations
+'''
+
+
 import cv2
 import numpy as np
 import nibabel as nib
@@ -26,11 +41,6 @@ def parse_arg():
 
 
 class data_preprocess_config(object):
-    # img_id = 'CTR_TST_001.nii.gz'
-    # base_dir = r'E:\Xing\TB2020\data\Test_data'
-    # img_pth = r'E:\Xing\TB2020\data\Test_data\CTR_TST_data'
-    # msk1_pth = r'E:\Xing\TB2020\data\Test_data\CTR_TST_masks1'
-    # msk2_pth = r'E:\Xing\TB2020\data\Test_data\CTR_TST_masks2'
     def __init__(self,args):
         self.img_id = args.img_id
         self.msk1_pth = args.msk1_pth
@@ -107,8 +117,6 @@ class data_preprocess(object):
         area = 0
         area_max = 0
         for i, c in enumerate(contours):
-            #         area[i] = cv2.contourArea(c)
-            #         print('the area is %d'%area[i])
             area = cv2.contourArea(c)
             if area_max < area:
                 area_max = area
@@ -121,7 +129,6 @@ class data_preprocess(object):
             y_min = y
             y_max = 0  # this is a trick to avoid the interuptions.
 
-        #     print('ymin and ymax =',y_min,y_max)
 
         if task == 'R':
             return y_max
@@ -179,11 +186,6 @@ class data_preprocess(object):
         y_min = min(np.array(minmax)[:, 2])
         y_max = max(np.array(minmax)[:, 3])
 
-        #     x_min = min(c_max[:,:,0])- margin
-        #     x_max = max(c_max[:,:,0])+ margin
-        #     y_min = min(c_max[:,:,1])- margin
-        #     y_max = max(c_max[:,:,1])+ margin
-
         msk_y = np.sum(msk, axis=0)
 
         img_binary = (msk_y > 0).astype(np.uint8)
@@ -206,7 +208,6 @@ class data_preprocess(object):
 
         print(x_min, x_max, y_min, y_max, z_min, z_max)
 
-        #     img_crop = image[y_min[0]:y_max[0], x_min[0]:x_max[0],z_min[0]:z_max[0]]
         img_crop = image[y_min:y_max, x_min:x_max, z_min:z_max]
 
         return img_crop
