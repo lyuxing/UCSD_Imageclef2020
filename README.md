@@ -1,6 +1,9 @@
 # UCSD_Imageclef2020
-For ImageCLEFmed Tuberculosis competition, the 2ed place. 
-Paper link: http://ceur-ws.org/Vol-2696/paper_70.pdf
+For ImageCLEFmed Tuberculosis competition, rank as the 2ed place.
+
+ImageCLEFmed competition website: https://www.aicrowd.com/challenges/imageclef-2020-tuberculosis-ct-report
+
+This work is invited published as a Paper, link: http://ceur-ws.org/Vol-2696/paper_70.pdf
 
 # Introduction
 We proposed an AI model with laterality-reduction 3D CBAM Resnet and balanced-sampler strategy to detect and characterize of tuberculosis and the evaluation of lesion characteristics as a solution for a classification of tuberculosis findings. Detection and characterization of tuberculosis and the evaluation of lesion characteristics are challenging. In an effort to provide a solution for a classification task of tuberculosis findings, we proposed a laterality-reduction 3D AI model with attention mechanism and balanced-sampler strategy. With proper usage of both provided masks, each side of the lung was cropped, masked, and rearranged so that laterality could be neglected, and dataset size doubled. Balanced sampler in each batch sampler was also used in this study to address the data imbalance problem. CBAM was used to add an attention mechanism in each block of the Res-net to further improve the performance of the CNN.
