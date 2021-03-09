@@ -48,13 +48,18 @@ https://drive.google.com/file/d/1wduk9us3OH1WWJ6mgAwPqjekdUd8OGAg/view?usp=shari
 ## Model Inference
 
 To test the performance on test dataset, run:
-`python3 inference_args.py --img_pth=<image dir> 
-                           --msk1_pth=<mask1 dir> 
-                           --msk2_pth=<mask2 dir> 
-                           --img_id = <image id>
-                           --model_path = <model path>'
+
+`python3 inference_args.py --img_pth='<image dir> '
+                           --msk1_pth='<mask1 dir> '
+                           --msk2_pth='<mask2 dir> '
+                           --img_id = '<image id>'
+                           --model_path = '<model path>''
+                           
 The results of the model will be printed. 
 
 # Contact
 
+Paper link: http://ceur-ws.org/Vol-2696/paper_70.pdf
+
 Xing Lu: lvxingvir@gmail.com
+Gentili Amilcare: agentili@health.ucsd.edu
