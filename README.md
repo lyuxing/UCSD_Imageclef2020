@@ -48,6 +48,17 @@ You could download the model to your local path: [model_path]
 
 https://drive.google.com/file/d/1wduk9us3OH1WWJ6mgAwPqjekdUd8OGAg/view?usp=sharing
 
+## Lung Mask Generation
+
+Lung mask could be generated with some open-sourced code, as provided by the imageclef organization:
+
+Mask 1: http://publications.hevs.ch/index.php/publications/show/1871
+
+Mask 2: https://github.com/skliff13/CT_RegSegm
+
+As well, there is another lung mask generation method via: https://github.com/JoHof/lungmask
+
+
 ## Model Inference
 
 To test the performance on test dataset, run:
